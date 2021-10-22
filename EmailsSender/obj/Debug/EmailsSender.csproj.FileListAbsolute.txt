@@ -1,0 +1,14 @@
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\bin\Debug\EmailsSender.exe.config
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\obj\Debug\EmailsSender.csprojResolveAssemblyReference.cache
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\obj\Debug\EmailsSender.ServiceSendEmail.resources
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\obj\Debug\EmailsSender.csproj.GenerateResource.Cache
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\bin\Debug\EmailsSender.exe
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\bin\Debug\EmailsSender.pdb
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\bin\Debug\Utils.exe
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\bin\Debug\System.Data.SQLite.dll
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\bin\Debug\Newtonsoft.Json.dll
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\bin\Debug\Utils.pdb
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\bin\Debug\Newtonsoft.Json.xml
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\obj\Debug\EmailsSender.exe
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\obj\Debug\EmailsSender.pdb
+c:\users\milena\documents\visual studio 2015\Projects\EmailsSender\EmailsSender\obj\Debug\EmailsSender.ProjectInstaller.resources
