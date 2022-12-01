@@ -60,3 +60,39 @@ C:\Users\Milena\Documents\Visual Studio 2015\Projects\EmailsSender\Utils\obj\Deb
 C:\Users\Milena\Documents\Visual Studio 2015\Projects\EmailsSender\Utils\obj\Debug\Utils.csproj.GenerateResource.Cache
 C:\Users\Milena\Documents\Visual Studio 2015\Projects\EmailsSender\Utils\obj\Debug\Utils.exe
 C:\Users\Milena\Documents\Visual Studio 2015\Projects\EmailsSender\Utils\obj\Debug\Utils.pdb
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\bin\Debug\Utils.exe.config
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\bin\Debug\Utils.exe
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\bin\Debug\Utils.pdb
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Data.OracleClient.dll
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Data.SQLite.dll
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Deployment.dll
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.Properties.Resources.resources
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.csproj.GenerateResource.Cache
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.exe
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.pdb
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.Properties.Resources.resources
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.csproj.GenerateResource.cache
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.exe
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.pdb
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\bin\Debug\Utils.exe.config
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\bin\Debug\Utils.exe
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\bin\Debug\Utils.pdb
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Data.DataSetExtensions.dll
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Data.OracleClient.dll
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Data.SQLite.dll
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\bin\Debug\System.Deployment.dll
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Rodrigo Machado\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.csproj.CopyComplete
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.csproj.AssemblyReference.cache
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.csproj.SuggestedBindingRedirects.cache
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.csproj.CoreCompileInputs.cache
+C:\Users\rodri\OneDrive\Projetos\EmailService\Utils\obj\Debug\Utils.csproj.CopyComplete
