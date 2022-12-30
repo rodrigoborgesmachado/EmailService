@@ -95,7 +95,7 @@ namespace Model
         public static void ReenviaEmailsComFalha(Model.MD_Configuracaoemail conf, System.Diagnostics.EventLog eventLog)
         {
             eventLog.WriteEntry("ReenviaEmailsComFalha");
-            string sentenca = new DAO.MD_Email().table.CreateCommandSQLTable() + " WHERE STATUS IN ('0', '2')";
+            string sentenca = "SELECT CODIGO FROM EMAIL WHERE STATUS IN ('0', '2')";
             eventLog.WriteEntry(sentenca);
 
             DbDataReader reader = DataBase.Connection.Select(sentenca);

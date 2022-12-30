@@ -16,162 +16,163 @@ namespace DAO
     {
         #region Atributos e Propriedades
 
-        private int codigo;
+        private int _codigo;
         /// <summary>
-        /// [CODIGO] Código do email
+        /// [CODIGO] 
         /// <summary>
         public int Codigo
         {
             get
             {
-                return this.codigo;
+                return this._codigo;
             }
             set
             {
-                this.codigo = value;
+                this._codigo = value;
             }
         }
 
-        private string destinatario;
+        private string _destinatario;
         /// <summary>
-        /// [DESTINATARIO] Destinatário do Email
+        /// [DESTINATARIO] 
         /// <summary>
         public string Destinatario
         {
             get
             {
-                return this.destinatario;
+                return this._destinatario;
             }
             set
             {
-                this.destinatario = value;
+                this._destinatario = value;
             }
         }
 
-        private string assunto;
+        private string _assunto;
         /// <summary>
-        /// [ASSUNTO] Assunto do Email
+        /// [ASSUNTO] 
         /// <summary>
         public string Assunto
         {
             get
             {
-                return this.assunto;
+                return this._assunto;
             }
             set
             {
-                this.assunto = value;
+                this._assunto = value;
             }
         }
 
-        private string texto;
+        private string _texto;
         /// <summary>
-        /// [TEXTO] Corpo do Email
+        /// [TEXTO] 
         /// <summary>
         public string Texto
         {
             get
             {
-                return this.texto;
+                return this._texto;
             }
             set
             {
-                this.texto = value;
+                this._texto = value;
             }
         }
 
-        private DateTime dataenvio = DateTime.Now;
+        private DateTime _dataenvio;
         /// <summary>
-        /// [DATAENVIO] Data de Envio do Email
+        /// [DATAENVIO] 
         /// <summary>
         public DateTime Dataenvio
         {
             get
             {
-                return this.dataenvio;
+                return this._dataenvio;
             }
             set
             {
-                this.dataenvio = value;
+                this._dataenvio = value;
             }
         }
 
-        private string status;
+        private string _status;
         /// <summary>
-        /// [STATUS] Status do envio (0 - Não enviado; 1 - Enviado; 2 - Erro)
+        /// [STATUS] 
         /// <summary>
         public string Status
         {
             get
             {
-                return this.status;
+                return this._status;
             }
             set
             {
-                this.status = value;
+                this._status = value;
             }
         }
 
-        private string observacao;
+        private string _observacao;
         /// <summary>
-        /// [OBSERVACAO] Campo de observação do email
+        /// [OBSERVACAO] 
         /// <summary>
         public string Observacao
         {
             get
             {
-                return this.observacao;
+                return this._observacao;
             }
             set
             {
-                this.observacao = value;
+                this._observacao = value;
             }
         }
 
 
-		#endregion Atributos e Propriedades
+        #endregion Atributos e Propriedades
 
         #region Construtores
 
-		/// <summary>
+        /// <summary>
         /// Construtor Principal da classe
         /// </summary>
         public MD_Email()
             : base()
         {
             base.table = new MDN_Table("EMAIL");
-            this.table.Fields_Table.Add(new MDN_Campo("CODIGO", false, Util.Enumerator.DataType.INT, 0, true, false, 0, 0));
-            this.table.Fields_Table.Add(new MDN_Campo("DESTINATARIO", true, Util.Enumerator.DataType.STRING, "", false, false, 300, 0));
-            this.table.Fields_Table.Add(new MDN_Campo("ASSUNTO", true, Util.Enumerator.DataType.STRING, "", false, false, 300, 0));
-            this.table.Fields_Table.Add(new MDN_Campo("TEXTO", true, Util.Enumerator.DataType.STRING, "", false, false, 8000, 0));
-            this.table.Fields_Table.Add(new MDN_Campo("DATAENVIO", true, Util.Enumerator.DataType.DATE, DateTime.Now, false, false, 0, 0));
-            this.table.Fields_Table.Add(new MDN_Campo("STATUS", true, Util.Enumerator.DataType.CHAR, "0", false, false, 1, 0));
-            this.table.Fields_Table.Add(new MDN_Campo("OBSERVACAO", false, Util.Enumerator.DataType.STRING, "", false, false, 1000, 0));
+            this.table.Fields_Table.Add(new MDN_Campo("CODIGO", false, Util.Enumerator.DataType.INT, null, true, false, 0, 10));
+            this.table.Fields_Table.Add(new MDN_Campo("DESTINATARIO", false, Util.Enumerator.DataType.STRING, null, false, false, 300, 0));
+            this.table.Fields_Table.Add(new MDN_Campo("ASSUNTO", false, Util.Enumerator.DataType.STRING, null, false, false, 300, 0));
+            this.table.Fields_Table.Add(new MDN_Campo("TEXTO", false, Util.Enumerator.DataType.STRING, null, false, false, 8000, 0));
+            this.table.Fields_Table.Add(new MDN_Campo("DATAENVIO", false, Util.Enumerator.DataType.DATE, null, false, false, 0, 0));
+            this.table.Fields_Table.Add(new MDN_Campo("STATUS", false, Util.Enumerator.DataType.STRING, null, false, false, 1, 0));
+            this.table.Fields_Table.Add(new MDN_Campo("OBSERVACAO", true, Util.Enumerator.DataType.STRING, "", false, false, 1000, 0));
+
         }
 
-		/// <summary>
+        /// <summary>
         /// Construtor Secundário da classe
         /// </summary>
-        /// <param name="CODIGO">Código do email
-        public MD_Email(int codigo)
-            :this()
+        public MD_Email(int _codigo)
+            : this()
         {
-            this.codigo = codigo;
+            this.Codigo = _codigo;
             this.Load();
         }
 
 
-		#endregion Construtores
+        #endregion Construtores
 
         #region Métodos
 
-		/// <summary>
+        /// <summary>
         /// Método que faz o load da classe
         /// </summary>
         public override void Load()
         {
+            Util.CL_Files.WriteOnTheLog("MD_Email.Load()", Util.Global.TipoLog.DETALHADO);
 
-            string sentenca = base.table.CreateCommandSQLTable() + " WHERE CODIGO = " + Codigo + "";
+            string sentenca = base.table.CreateCommandSQLTable() + $" WHERE CODIGO = {this.Codigo}";
             DbDataReader reader = DataBase.Connection.Select(sentenca);
 
             if (reader == null)
@@ -182,10 +183,12 @@ namespace DAO
             {
                 this.Destinatario = reader["DESTINATARIO"].ToString();
                 this.Assunto = reader["ASSUNTO"].ToString();
-                this.Texto = reader["TEXTO"].ToString();
-                this.Dataenvio = DateTime.Parse(reader["DATAENVIO"].ToString());
+                DateTime.TryParse(reader["DATAENVIO"].ToString(), out this._dataenvio);
                 this.Status = reader["STATUS"].ToString();
                 this.Observacao = reader["OBSERVACAO"].ToString();
+
+                byte[] textoByte = (byte[])reader["TEXTO"];
+                this.Texto = Encoding.UTF8.GetString(textoByte);
 
                 this.Empty = false;
                 reader.Close();
@@ -203,7 +206,8 @@ namespace DAO
         /// <returns>True - sucesso; False - erro</returns>
         public override bool Delete()
         {
-            string sentenca = "DELETE FROM " + this.table.Table_Name + " WHERE CODIGO = " + Codigo + "";
+            string sentenca = $"DELETE FROM {base.table.Table_Name} WHERE CODIGO = {this.Codigo}";
+
             return DataBase.Connection.Delete(sentenca);
         }
 
@@ -213,10 +217,17 @@ namespace DAO
         /// <returns></returns>
         public override bool Insert()
         {
-            string sentenca = string.Empty;
+            string sentenca = $"INSERT INTO {table.Table_Name} ({table.TodosCampos()})" +
+                       " VALUES ( " +
+                       (Codigo == int.MinValue ? "NULL" : $"'{this.Codigo}'") + ", " +
+                       (string.IsNullOrEmpty(Destinatario) ? "NULL" : $"'{this.Destinatario}'") + ", " +
+                       (string.IsNullOrEmpty(Assunto) ? "NULL" : $"'{this.Assunto}'") + ", " +
+                       (string.IsNullOrEmpty(Texto) ? "NULL" : $"CAST('{this.Texto}' AS VARBINARY(MAX))") + ", " +
+                       (Dataenvio == DateTime.MinValue ? "NULL" : "'" + this.MontaStringDateTimeFromDateTime(this.Dataenvio) + "'") + ", " +
+                       (string.IsNullOrEmpty(Status) ? "NULL" : $"'{this.Status}'") + ", " +
+                       $"'{this.Observacao}'" + ")";
 
-            sentenca = "INSERT INTO " + table.Table_Name + " (" + table.TodosCampos() + ")" + 
-                              " VALUES (" + this.codigo + ",  '" + this.destinatario + "',  '" + this.assunto + "',  '" + this.texto + "',  '" + this.MontaStringDateTimeFromDateTime(this.dataenvio) + "',  '" + this.status + "',  '" + this.observacao + "')";
+
             if (DataBase.Connection.Insert(sentenca))
             {
                 Empty = false;
@@ -231,15 +242,16 @@ namespace DAO
         /// <returns>True - sucesso; False - erro</returns>
         public override bool Update()
         {
-            string sentenca = string.Empty;
-
-            sentenca = "UPDATE " + table.Table_Name + " SET " + 
-                        "CODIGO = " + Codigo + ", DESTINATARIO = '" + Destinatario + "', ASSUNTO = '" + Assunto + "', TEXTO = '" + Texto + "', DATAENVIO = '" + this.MontaStringDateTimeFromDateTime(Dataenvio) + "', STATUS = '" + Status + "', OBSERVACAO = '" + Observacao + "'" + 
-                        " WHERE CODIGO = " + Codigo + "";
+            string sentenca = $"UPDATE {this.table.Table_Name} SET " +
+                              $"DESTINATARIO = {(string.IsNullOrEmpty(this.Destinatario) ? "NULL" : $"'{this.Destinatario}'")}" + ", " +
+                              $"DATAENVIO = {(this.Dataenvio == DateTime.MinValue ? "NULL" : $"'{this.MontaStringDateTimeFromDateTime(this.Dataenvio)}'")}" + ", " +
+                              $"STATUS = {(string.IsNullOrEmpty(this.Status) ? "NULL" : $"'{this.Status}'")}" + ", " +
+                              $"OBSERVACAO = '{this.Observacao}'" +
+                              $" WHERE CODIGO = {this.Codigo}";
 
             return DataBase.Connection.Update(sentenca);
         }
 
-		#endregion Métodos
+        #endregion Métodos
     }
 }
