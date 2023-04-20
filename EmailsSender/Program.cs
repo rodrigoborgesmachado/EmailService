@@ -20,6 +20,7 @@ namespace EmailsSender
                 new ServiceSendEmail()
             };
             ServiceBase.Run(ServicesToRun);
+            //ServiceSendEmail temp = new ServiceSendEmail(1);
         }
     }
 }

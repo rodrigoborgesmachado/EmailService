@@ -27,6 +27,23 @@ namespace EmailsSender
             eventLog.Log = "LogEmailSending";
         }
 
+        public ServiceSendEmail(int teste)
+        {
+            eventLog = new EventLog();
+            if (!EventLog.SourceExists("EmailSending"))
+            {
+                EventLog.CreateEventSource(
+                    "EmailSending", "LogEmailSending");
+            }
+            eventLog.Source = "EmailSending";
+            eventLog.Log = "LogEmailSending";
+
+            while (teste-- > 0)
+            {
+                OnTimer(null, null);
+            }
+        }
+
         protected override void OnStart(string[] args)
         {
             // Update the service state to Start Pending.
@@ -49,9 +66,7 @@ namespace EmailsSender
         private void OnTimer(object sender, ElapsedEventArgs e)
         {
             eventLog.WriteEntry("Executando");
-            DataBase.Connection.OpenConection("Data Source=P3NWPLSK12SQL-v09.shr.prod.phx3.secureserver.net;Integrated Security=" +
-            "False;User ID=rodrigo;Password=X19umw_9;Connect Timeout=15;Encrypt=False;Packet " +
-            "Size=4096");
+            DataBase.Connection.OpenConection("Server=tcp:sunsale.database.windows.net,1433;Initial Catalog=devtools;Persist Security Info=False;User ID=rodrigo;Password=qbj1ACjd**;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
 
             try
             {
