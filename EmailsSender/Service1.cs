@@ -55,7 +55,7 @@ namespace EmailsSender
             eventLog.WriteEntry("Service started");
 
             Timer timer = new Timer();
-            timer.Interval = 60000; // 60 seconds
+            timer.Interval = 10000; // 10 seconds
             timer.Elapsed += new ElapsedEventHandler(this.OnTimer);
             timer.Start();
 
